@@ -99,3 +99,8 @@ document.getElementById("invert").addEventListener("click", () => {
 });
 
 carregarMoedas();
+
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("/conversor-global-moedas/sw.js")
+    .then(() => console.log("Service Worker registrado"));
+}
